@@ -1,0 +1,31 @@
+.App {
+  position:absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.App img {
+  height: 200px;
+  pointer-events: none;
+}
+
+.spin {
+    animation: spin 5s linear infinite;
+}
+
+h1 {
+  margin-top: 50px;
+}
+
+@keyframes spin {
+    from {
+        rotate: 0deg;
+    }
+
+    to {
+      rotate: 360deg;
+    }
+}
