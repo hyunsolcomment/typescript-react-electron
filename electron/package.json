@@ -29,7 +29,7 @@
     "afterPack": "../assets/afterInstall.cjs",
     "extends": null,
     "win": {
-      "icon": "../assets/icons/icon.ico"
+      "icon": "../assets/icons/icon.png"
     },
     "mac": {
       "icon": "../assets/icons",
