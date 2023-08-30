@@ -9,3 +9,11 @@
  <li><b>nodemon:</b> electron 폴더 내의 ts 파일에 변경사항이 저장되면, 자동으로 Electron을 재시작합니다.</li>
  <li><b>wait-on: </b>리엑트가 시작할 때 까지 대기합니다. (localhost:3000이 시작된 후 npm run electron:dev 명령어를 구동하여 Electron을 시작)</li>
 </ul>
+
+<h2>빌드</h2>
+프로젝트 폴더에서 아래의 명령을 입력하여 Electron을 빌드할 수 있습니다.
+<pre>
+  npm run build
+</pre>
+
+빌드 시, 삭제되는 파일(dll 파일 및 .pak 파일)이 삭제 여부를 assets/afterInstall.cjs 에서 설정할 수 있습니다.
