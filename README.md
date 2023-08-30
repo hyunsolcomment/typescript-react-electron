@@ -1,0 +1,11 @@
+# electron-react-typescript-quickstart
+ Typescript + Electron + React 환경 빠르게 세팅하기
+
+<h2>라이브러리</h2>
+<ul>
+ <li><b>concurrently: </b>여러 명령어를 동시에 실행합니다. (리엑트을 시작함과 동시에 리엑트가 켜질 때 까지 대기 후, Electron을 시작하는 명령어를 구동하는 wait-on 명령어를 실행)</li>
+ <li><b>cross-env:</b> 구동 환경에 맞게 환경변수를 설정합니다. (BROWSER을 NONE으로 설정함으로써, 리엑트가 켜질 때 브라우저에 자동으로 localhost:3000가 열리도록 하는 것을 막음)</li>
+ <li><b>Electron</b></li>
+ <li><b>nodemon:</b> electron 폴더 내의 ts 파일에 변경사항이 저장되면, 자동으로 Electron을 재시작합니다.</li>
+ <li><b>wait-on: </b>리엑트가 시작할 때 까지 대기합니다. (localhost:3000이 시작된 후 npm run electron:dev 명령어를 구동하여 Electron을 시작)</li>
+</ul>
