@@ -10,6 +10,17 @@
  <li><b>wait-on: </b>리엑트가 시작할 때 까지 대기합니다. (localhost:3000이 시작된 후 npm run electron:dev 명령어를 구동하여 Electron을 시작)</li>
 </ul>
 
+<h2>설치</h2>
+1. 프로젝트 설치
+<pre>
+ git clone https://github.com/hyunsolcomment/typescript-react-electron
+</pre>
+
+2. 프로젝트 전체 패키지 설치
+   <pre>
+   npm run project-install
+   </pre>
+
 <h2>빌드</h2>
 프로젝트 폴더에서 아래의 명령을 입력하여 Electron을 빌드할 수 있습니다.
 <pre>
