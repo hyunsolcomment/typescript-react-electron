@@ -11,15 +11,21 @@
 </ul>
 
 <h2>설치</h2>
-1. 프로젝트 설치
-<pre>
- git clone https://github.com/hyunsolcomment/typescript-react-electron
-</pre>
+<ol>
+ <li>
+  프로젝트 설치
+  <pre>
+  git clone https://github.com/hyunsolcomment/typescript-react-electron
+  </pre>
+ </li>
 
-2. 프로젝트 전체 패키지 설치
-   <pre>
-   npm run project-install
-   </pre>
+ <li>
+  프로젝트 전체 패키지 설치
+  <pre>
+  npm run project-install
+  </pre>
+ </li>
+</ol>
 
 <h2>빌드</h2>
 프로젝트 폴더에서 아래의 명령을 입력하여 Electron을 빌드할 수 있습니다.
