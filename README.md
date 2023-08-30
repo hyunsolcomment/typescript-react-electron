@@ -14,16 +14,12 @@
 <ol>
  <li>
   프로젝트 설치
-  <pre>
-  git clone https://github.com/hyunsolcomment/typescript-react-electron
-  </pre>
+  <pre>git clone https://github.com/hyunsolcomment/typescript-react-electron</pre>
  </li>
 
  <li>
   프로젝트 전체 패키지 설치
-  <pre>
-  npm run project-install
-  </pre>
+  <pre>npm run project-install</pre>
  </li>
 </ol>
 
