@@ -1,8 +1,13 @@
+import { useEffect } from 'react';
 import './App.css';
 import useTitle from './hook/useTitle';
 
 function App() {
   useTitle("Typescript + React + Electron");
+
+  useEffect(() => {
+    window.electron.test();
+  },[]);
 
   return (
     <div className="App">

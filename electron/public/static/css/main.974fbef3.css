@@ -1,2 +1,0 @@
-body{background:#272727;color:#fff;margin:0;padding:0}.App{left:50%;position:absolute;text-align:center;top:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);white-space:nowrap}.App img{height:200px;pointer-events:none}.spin{-webkit-animation:spin 5s linear infinite;animation:spin 5s linear infinite}@-webkit-keyframes spin{0%{rotate:0deg}to{rotate:1turn}}@keyframes spin{0%{rotate:0deg}to{rotate:1turn}}
-/*# sourceMappingURL=main.974fbef3.css.map*/

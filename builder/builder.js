@@ -1,7 +1,7 @@
 import {exec} from 'child_process';
 import { copy, getFileExtension } from './util/FileUtil.js';
 import path from 'path';
-import fs, { rm } from 'fs/promises';
+import fs, { access, rm } from 'fs/promises';
 
 console.clear();
 
@@ -65,8 +65,8 @@ exec("cd electron && npx tsc", (err) => {
 
             await fs.writeFile(indexHTMLPath, 
                 indexHTML
-                    .replace('src="/static/','src="./static/')
-                    .replace('href="/static/', 'href="./static/')
+                    .replaceAll('src="/static/','src="./static/')
+                    .replaceAll('href="/static/', 'href="./static/')
             )
 
             console.log(`index.html 수정`);
@@ -95,7 +95,7 @@ exec("cd electron && npx tsc", (err) => {
             const css = await fs.readFile(`${cssPath}${cssName}`, 'utf-8')
 
             await fs.writeFile(`${cssPath}${cssName}`, 
-                css.replace('/static/','./static/')
+                css.replaceAll('/static/','./static/')
             )
 
             // 일렉트론 public에 있는 기존 assets 제거
@@ -106,9 +106,7 @@ exec("cd electron && npx tsc", (err) => {
 
                 try {
                     await fs.access(assetsPath)
-                    await fs.rm(assetsPath, {
-                        recursive: true
-                    })
+                    await fs.rm(assetsPath, { recursive: true })
 
                 } catch { }
                 
@@ -122,7 +120,11 @@ exec("cd electron && npx tsc", (err) => {
 
             // 일렉트론 빌드 전에 dist 폴더 삭제하기
             console.log("dist 폴더 삭제")
-            await rm("dist", { recursive: true });
+
+            try {
+                await access("dist")
+                await rm("dist", { recursive: true });
+            } catch { }
 
             setTimeout(() => {
                 // 4. 일렉트론 빌드
